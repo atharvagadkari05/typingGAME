@@ -1,48 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="title">
+        <h1>TypoMaster</h1>
+    </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WordBeater</title>
-  <link rel="stylesheet" href="main.css">
-</head>
-
-<body>
-
-
-        <p>Type The Given Word Within
-          <span id="seconds">5</span> Seconds:</p>
-        <h2 id="current-word">hello</h2>
-        <input type="text" placeholder="Start typing..." id="word-input" >
-        <h4 id="message"></h4>
-
-        
-      
-            <h3>Time Left:
-              <span id="time">0</span>
-            </h3>
-          
-         
-            <h3>Score:
-              <span id="score">0</span>
-            </h3>
-        
-          <br><br>
-          
-            <h3>High Score:
-              <span id="highscore">0</span>
-            </h3>
+        <p class="instruct_msg">Type The Given Word Within
+            <span id="seconds">5</span> Seconds:</p>
+          <h2 id="current-word">hello</h2>
+          <input type="text" placeholder="Start typing..." id="word-input" ><button class="btn">Start Game</button>
+          <h4 id="message"></h4>
+  
           
         
-
-       
-              <h5>Instructions</h5>
-              <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
-                will reset</p>
+              <h3>Time Left:
+                <span id="time">0</span>
+              </h3>
             
-  <script src="index.js"></script>
-</body>
-
+           
+              <h3>Score:
+                <span id="score">0</span>
+              </h3>
+          
+            <br><br>
+            
+              
+            
+          
+  
+         
+                <h5>Instructions</h5>
+                <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
+                  will reset</p>
+              
+    <script src="index.js"></script>
+    </body>
 </html>

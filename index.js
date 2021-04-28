@@ -1,4 +1,6 @@
-window.addEventListener('load', init);
+
+let button = document.querySelector(".btn")
+button.addEventListener('click', init);
 
 let time = 5;
 let score = 0;
@@ -14,11 +16,12 @@ const seconds = document.querySelector('#seconds');
 const highscoreDisplay = document.querySelector('#highscore');
 
 const words = [
-  'hat',
+  'hello',
+  'pond',
+  'brave',
   'river',
-  'lucky',
-  'statue',
-  'generate',
+  'backbone',
+
   'stubborn',
   'cocktail',
   'runaway',
@@ -59,24 +62,12 @@ function init() {
 function startMatch() {
   if (matchWords()) {
     isPlaying = true;
-    time = currentLevel + 1;
+    time = 6;
     showWord(words);
     wordInput.value = '';
     score++;
   }
   
-  
-  if (typeof sessionStorage['highscore'] === 'undefined' || score > sessionStorage['highscore']) {
-    sessionStorage['highscore'] = score;
-  } else {
-    sessionStorage['highscore'] = sessionStorage['highscore'];
-  }
-
-  
-  if (sessionStorage['highscore'] >= 0) {
-  highscoreDisplay.innerHTML = sessionStorage['highscore'];
-  }
-
   
   if (score === -1) {
     scoreDisplay.innerHTML = 0;
