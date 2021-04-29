@@ -80,6 +80,7 @@ function startMatch() {
 function matchWords() {
   if (wordInput.value === currentWord.innerHTML) {
     message.innerHTML = 'Correct!!!';
+    message.style.color = 'green';
     return true;
   } else {
     message.innerHTML = '';
@@ -112,6 +113,7 @@ function countdown() {
 function checkStatus() {
   if (!isPlaying && time === 0) {
     message.innerHTML = 'Game Over!!!';
+    message.style.color = 'red';
     score = -1;
   }
 }
