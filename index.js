@@ -60,6 +60,8 @@ function init() {
   message.innerHTML = '';
   scoreDisplay.innerHTML = 0;
 
+  wordInput.value = '';
+  wordInput.focus();
   wordInput.addEventListener('input', startMatch);
 
   clearInterval(countdownInterval);
