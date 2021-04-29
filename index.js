@@ -6,6 +6,10 @@ let time = 5;
 let score = 0;
 let isPlaying;
 
+// Variable for the intervals so it can be cleared
+let countdownInterval;
+let checkStatusInterval;
+
 
 const wordInput = document.querySelector('#word-input');
 const currentWord = document.querySelector('#current-word');
@@ -46,29 +50,34 @@ const words = [
 
 
 function init() {
-  
-  seconds.innerHTML = '5';
-  
+  isPlaying = true;
+
+  time = 5;
+  score = 0;
+
   showWord(words);
 
+  message.innerHTML = '';
+  scoreDisplay.innerHTML = 0;
+
   wordInput.addEventListener('input', startMatch);
- 
-  setInterval(countdown, 1000);
-  
-  setInterval(checkStatus, 50);
+
+  clearInterval(countdownInterval);
+  countdownInterval = setInterval(countdown, 1000);
+
+  clearInterval(checkStatusInterval);
+  checkStatusInterval = setInterval(checkStatus, 50);
 }
 
 
 function startMatch() {
   if (matchWords()) {
-    isPlaying = true;
     time = 6;
     showWord(words);
     wordInput.value = '';
     score++;
   }
-  
-  
+
   if (score === -1) {
     scoreDisplay.innerHTML = 0;
   } else {
@@ -89,23 +98,23 @@ function matchWords() {
 }
 
 function showWord(words) {
- 
+
   const randIndex = Math.floor(Math.random() * words.length);
- 
+
   currentWord.innerHTML = words[randIndex];
 }
 
 
 function countdown() {
-  
+
   if (time > 0) {
-    
+
     time--;
   } else if (time === 0) {
-    
+
     isPlaying = false;
   }
- 
+
   timeDisplay.innerHTML = time;
 }
 
@@ -114,6 +123,5 @@ function checkStatus() {
   if (!isPlaying && time === 0) {
     message.innerHTML = 'Game Over!!!';
     message.style.color = 'red';
-    score = -1;
   }
 }
