@@ -72,7 +72,7 @@ function init() {
 
 function startMatch() {
   if (isPlaying && matchWords()) {
-    time = 6;
+    time = 5;
     showWord(words);
     wordInput.value = '';
     score++;
@@ -106,16 +106,12 @@ function showWord(words) {
 
 
 function countdown() {
-
+  timeDisplay.innerHTML = time;
   if (time > 0) {
-
     time--;
-  } else if (time === 0) {
-
+  } else if (time <= 0) {
     isPlaying = false;
   }
-
-  timeDisplay.innerHTML = time;
 }
 
 
