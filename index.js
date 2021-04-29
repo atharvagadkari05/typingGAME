@@ -71,7 +71,7 @@ function init() {
 
 
 function startMatch() {
-  if (matchWords()) {
+  if (isPlaying && matchWords()) {
     time = 6;
     showWord(words);
     wordInput.value = '';
