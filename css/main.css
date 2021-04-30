@@ -6,6 +6,7 @@
 body{
     font-family: Poppins;
     background-color: rgb(255, 255, 255);
+    
   
 }
 .title{
@@ -27,7 +28,7 @@ body{
     color:rgb(31, 255, 10);
 }
 .btn{
-padding: 1em;
+padding: 0.81em;
 margin: 2em;
 color: white;
 background-color: black;
@@ -40,6 +41,13 @@ border-radius: 5px;
     text-align: center;
     margin: 1em;
     font-size: 54px;
+
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
 }
 .input{
     text-align: center;
