@@ -17,7 +17,7 @@ const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
-const highscoreDisplay = document.querySelector('#highscore');
+
 
 const words = [
   'hello',
