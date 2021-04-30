@@ -89,7 +89,7 @@ function startMatch() {
 
 
 function matchWords() {
-  if (wordInput.value == currentWord.innerHTML) {
+  if (wordInput.value.toUpperCase() == currentWord.innerHTML.toUpperCase()) {
     message.innerHTML = 'Correct!!!';
     message.style.color = 'green';
     return true;
